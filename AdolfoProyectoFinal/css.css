@@ -1,0 +1,307 @@
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: url('gd.jfif') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    animation: fadeIn 1s ease-out, backgroundMove 20s linear infinite; /* Animación de fondo */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animación para la carga de la página */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animación para el movimiento del fondo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(4, 40, 199, 0.8); /* Fondo semi-transparente */
+    color: rgb(255, 255, 255);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #fff; /* Borde blanco */
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header img.circular {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4caf50;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+header img.circular:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #0622c2;
+    padding: 15px 0;
+    text-align: center;
+    animation: fadeInNav 1s ease-out;
+}
+
+@keyframes fadeInNav {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav a:hover {
+    background-color: #4caf50;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Secciones */
+.section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInSection 0.8s ease-out;
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.section ul li {
+    font-size: 1.2rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+/* Botones */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    animation: fadeInButton 0.8s ease-out;
+    outline: none; /* Para quitar el borde de enfoque */
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Enlaces */
+a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-top: 50px;
+    animation: fadeInFooter 1s ease-out;
+}
+
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos específicos para la imagen de inicio */
+.inicio-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    animation: fadeInInicio 1s ease-out;
+}
+
+@keyframes fadeInInicio {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inicio-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.inicio-img:hover {
+    transform: scale(1.1);
+}
+
+.inicio-texto h1 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.inicio-texto p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.inicio-texto button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #009688;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inicio-texto button:hover {
+    background-color: #00796b; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05);
+}
+
+
